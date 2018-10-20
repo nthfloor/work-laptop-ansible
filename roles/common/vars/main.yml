@@ -1,0 +1,8 @@
+---
+apt_packages:
+  - name: curl
+  - name: vim
+
+snap_packages:
+  - name: slack
+  - name: skype
