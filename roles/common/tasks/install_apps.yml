@@ -7,5 +7,5 @@
   with_items: "{{ apt_packages }}"
 
 - name: install snap packages
-  command: "snap install {{ item.name }} --classic"
+  command: "snap install {{ item.name }} --classic --no-wait"
   with_items: "{{ snap_packages }}"

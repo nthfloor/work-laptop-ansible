@@ -2,6 +2,8 @@
 apt_packages:
   - name: curl
   - name: vim
+  - name: chromium-browser
+  - name: onedrive
 
 snap_packages:
   - name: slack

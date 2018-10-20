@@ -2,5 +2,9 @@
 - hosts: ubuntu
   connection: local
   gather_facts: no
+  vars:
+    ubuntu_version: bionic
   roles:
     - common
+    # - dev_tools
+    # - personal
