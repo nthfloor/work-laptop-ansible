@@ -1,0 +1,6 @@
+---
+- name: install steam
+  apt:
+    name: steam
+    update_cache: yes
+    state: latest

@@ -6,5 +6,5 @@
     ubuntu_version: bionic
   roles:
     - common
-    # - dev_tools
-    # - personal
+    - dev_tools
+    - personal

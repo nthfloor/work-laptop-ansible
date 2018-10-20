@@ -1,0 +1,10 @@
+---
+- name: install deb packages
+  apt:
+    deb: "{{ item.url }}"
+  with_items: "{{ deb_packages }}"
+
+- name: install snap packages
+  command: "snap install {{ item.name }} --classic --no-wait"
+  with_items: "{{ snap_packages }}"
+  

@@ -1,0 +1,8 @@
+---
+deb_packages:
+  - name: vscode
+    url: https://go.microsoft.com/fwlink/?LinkID=760868
+
+snap_packages:
+  - name: heroku
+  - name: postman
