@@ -7,6 +7,8 @@ apt_packages:
   - name: default-jdk
   - name: maven
   - name: keepass2
+  - name: nodejs
+  - name: npm
 
 snap_packages:
   - name: heroku
