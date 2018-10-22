@@ -6,6 +6,7 @@ deb_packages:
 apt_packages:
   - name: default-jdk
   - name: maven
+  - name: keepass2
 
 snap_packages:
   - name: heroku
