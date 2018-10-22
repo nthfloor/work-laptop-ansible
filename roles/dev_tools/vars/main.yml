@@ -3,6 +3,10 @@ deb_packages:
   - name: vscode
     url: https://go.microsoft.com/fwlink/?LinkID=760868
 
+apt_packages:
+  - name: default-jdk
+  - name: maven
+
 snap_packages:
   - name: heroku
   - name: postman
