@@ -11,6 +11,7 @@ apt_packages:
   - name: chromium-browser
   - name: onedrive
   - name: sublime-text
+  - name: zsh
 
 snap_packages:
   - name: slack
