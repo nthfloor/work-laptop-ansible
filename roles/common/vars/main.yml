@@ -12,6 +12,7 @@ apt_packages:
   - name: onedrive
   - name: sublime-text
   - name: zsh
+  - name: htop
 
 snap_packages:
   - name: slack
