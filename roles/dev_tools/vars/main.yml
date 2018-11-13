@@ -10,6 +10,7 @@ apt_packages:
   - name: nodejs
   - name: npm
   - name: virtualbox
+  - name: vagrant
 
 snap_packages:
   - name: heroku
