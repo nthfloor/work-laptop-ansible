@@ -11,6 +11,7 @@ apt_packages:
   - name: npm
   - name: virtualbox
   - name: vagrant
+  - name: mysql-workbench
 
 snap_packages:
   - name: heroku
