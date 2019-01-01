@@ -3,3 +3,4 @@ apt_packages:
   - name: wine64
   - name: playonlinux
   - name: steam
+  - name: pdfsam
