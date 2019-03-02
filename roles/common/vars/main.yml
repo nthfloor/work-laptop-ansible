@@ -13,6 +13,7 @@ apt_packages:
   - name: sublime-text
   - name: zsh
   - name: htop
+  - name: tilda
 
 snap_packages:
   - name: slack
