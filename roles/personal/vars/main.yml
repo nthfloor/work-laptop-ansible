@@ -7,9 +7,9 @@ apt_packages:
 
 snap_packages:
   - name: spotify
-  - name: wekan
   
 extra_packages:
+  - name: wekan
   - name: raven-reader
   - name: winds
   - name: electrum
