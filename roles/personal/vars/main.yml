@@ -4,3 +4,13 @@ apt_packages:
   - name: playonlinux
   - name: steam
   - name: pdfsam
+
+snap_packages:
+  - name: spotify
+  - name: wekan
+  
+extra_packages:
+  - name: raven-reader
+  - name: winds
+  - name: electrum
+  - name: nextcloud

@@ -1,24 +1,24 @@
 ---
-deb_packages:
-  - name: vscode
-    url: https://go.microsoft.com/fwlink/?LinkID=760868
-
-apt_packages:
+apt_packages:  
   - name: default-jdk
   - name: maven
-  - name: keepass2
-  - name: nodejs
-  - name: npm
+  - name: mysql-workbench
   - name: virtualbox
   - name: vagrant
-  - name: mysql-workbench
 
 snap_packages:
-  - name: heroku
   - name: postman
+  - name: code
+  - name: termius-app
+  - name: intellij-idea-community
+  - name: docker
 
-curl_packages:
+script_install_packages:
   - name: docker-compose
     command: sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose && sudo chmod +x /usr/local/bin/docker-compose
   - name: nvm
     command: curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh -o install_nvm.sh && bash install_nvm.sh
+
+extra_packages:
+  - name: heroku
+  - name: slack-term

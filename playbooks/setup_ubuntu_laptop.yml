@@ -4,6 +4,8 @@
   gather_facts: no
   vars:
     ubuntu_version: bionic
+    install_dotnetcore: false
+    install_extra_packages: false
   roles:
     - common
     - dev_tools

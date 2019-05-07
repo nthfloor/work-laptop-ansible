@@ -15,6 +15,6 @@
   command: "snap install {{ item.name }} --classic --no-wait"
   with_items: "{{ snap_packages }}"
   
-- name: Download and Install packages
+- name: Download and Install packages using scripts
   command: "{{ item.command }}"
-  with_items: "{{ curl_packages }}"
+  with_items: "{{ script_install_packages }}"
