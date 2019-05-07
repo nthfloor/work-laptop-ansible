@@ -1,12 +1,4 @@
 ---
-apt_repository:
-  - name: fingureprint_repo
-    apt_repo: deb https://download.sublimetext.com/ apt/stable/
-    apt_key: https://download.sublimetext.com/sublimehq-pub.gpg
-  - name: tlp_repo
-    apt_repo: deb https://download.sublimetext.com/ apt/stable/
-    apt_key: https://download.sublimetext.com/sublimehq-pub.gpg
-
 apt_packages:
   - name: curl
   - name: vim

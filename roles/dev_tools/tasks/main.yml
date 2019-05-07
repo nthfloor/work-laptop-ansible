@@ -1,4 +1,15 @@
 ---
+- name: install apt repository keys
+  apt_key:
+    url: "{{ item.apt_key }}"
+  with_items: "{{ apt_repository }}" 
+
+- name: install apt repository
+  apt_repository:
+    repo: "{{ item.apt_repo }}"
+    state: present
+  with_items: "{{ apt_repository }}"
+
 - name: install deb packages
   apt:
     deb: "{{ item.url }}"
@@ -14,7 +25,3 @@
 - name: install snap packages
   command: "snap install {{ item.name }} --classic --no-wait"
   with_items: "{{ snap_packages }}"
-  
-- name: Download and Install packages using scripts
-  command: "{{ item.command }}"
-  with_items: "{{ script_install_packages }}"
