@@ -2,9 +2,8 @@
 - name: install apt repository keys
   apt_key:
     url: "{{ item.apt_key }}"
-  when: apt_repository is defined
   with_items: "{{ apt_repository }}" 
-  
+  when: apt_repository is defined
 
 - name: install apt repository
   apt_repository:
@@ -29,8 +28,3 @@
 - name: install snap packages
   command: "snap install {{ item.name }} --classic"
   with_items: "{{ snap_packages }}"
-
-- name: Download and Install packages using scripts
-  command: "{{ item.command }}"
-  with_items: "{{ script_install_packages }}"
-  when: script_install_packages is defined
