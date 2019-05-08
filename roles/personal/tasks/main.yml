@@ -2,18 +2,21 @@
 - name: install apt repository keys
   apt_key:
     url: "{{ item.apt_key }}"
-  with_items: "{{ apt_repository }}" 
+  with_items: "{{ apt_repository }}"
+  when: apt_repository is defined
 
 - name: install apt repository
   apt_repository:
     repo: "{{ item.apt_repo }}"
     state: present
   with_items: "{{ apt_repository }}"
+  when: apt_repository is defined
 
 - name: install deb packages
   apt:
     deb: "{{ item.url }}"
   with_items: "{{ deb_packages }}"
+  when: deb_packages is defined
 
 - name: install apt packages
   apt:
@@ -25,3 +28,8 @@
 - name: install snap packages
   command: "snap install {{ item.name }} --classic --no-wait"
   with_items: "{{ snap_packages }}"
+
+- name: Download and Install packages using scripts
+  command: "{{ item.command }}"
+  with_items: "{{ script_install_packages }}"
+  when: script_install_packages is defined
