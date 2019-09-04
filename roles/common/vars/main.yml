@@ -10,6 +10,7 @@ apt_packages:
   - name: build-essential
   - name: zsh
   - name: tilda
+  - name: gnome-shell-extensions
 
 snap_packages:
   - name: slack
@@ -18,3 +19,4 @@ snap_packages:
   - name: chromium
   - name: mailspring
   - name: keepassxc
+  - name: system-monitor

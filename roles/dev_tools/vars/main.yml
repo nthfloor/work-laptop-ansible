@@ -1,15 +1,23 @@
 ---
-# apt_repository:
-#   - name:
-#     apt_repo: 
-#     apt_key:
+#apt_repository:
+#  - name: Java OpenJDK APT Repo
+#    apt_repo: ppa:openjdk-r/ppa 
+#    apt_key:
+#  - name: tlp
+#    apt_repo: ppa:linrunner/tlp
+#    apt_key: 
 
 apt_packages:  
   - name: default-jdk
   - name: maven
-  - name: mysql-workbench
+  # - name: mysql-workbench-community
   - name: virtualbox
   - name: vagrant
+  - name: openjdk-8-jdk
+  - name: openjdk-8-jre
+  - name: powertop
+  - name: tlp
+  - name: git
 
 snap_packages:
   - name: postman
