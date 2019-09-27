@@ -22,10 +22,10 @@ apt_packages:
 snap_packages:
   - name: postman
   - name: code
-  - name: termius-app
   - name: intellij-idea-community
   - name: docker
 
 extra_packages:
   - name: heroku
+  - name: termius-app
   - name: slack-term

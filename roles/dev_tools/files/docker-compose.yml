@@ -1,0 +1,47 @@
+version: '3'
+
+networks:
+  epts:
+
+volumes:
+  mysql-data:
+
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:5.6
+    environment:
+      MYSQL_ROOT_PASSWORD: "test"
+      MYSQL_DATABASE: "openmrsFGH"
+      MYSQL_USER: "openmrs"
+      MYSQL_PASSWORD: "openmrs"
+    ports:
+      - "3306:3306"
+    command: --max_allowed_packet=32505856
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - epts
+
+  openmrs:
+    container_name: openmrs
+    build:
+      context: ./openmrs
+      args:
+        DB_HOST: "mysql"
+        DB_DATABASE: "openmrsFGH"
+        DB_USERNAME: "openmrs"
+        DB_PASSWORD: "openmrs"
+        DB_AUTO_UPDATE: 'true'
+    image: openmrs-1.11.7
+    environment:
+      JPDA_ADDRESS: 1044
+      JPDA_TRANSPORT: "dt_socket"
+    ports:
+      - "8080:8080"
+      - "1044:1044"
+    depends_on:
+      - mysql
+    networks:
+      - epts
+
